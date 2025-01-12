@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Mayor_de_edad
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingresa tu edad: ");
+            string edadtxt = Console.ReadLine();    
+            int edad = Convert.ToInt32(edadtxt);
+            if (edad >= 18) //Evalua si es menor o mayor de edad siendo si es mayor o igual.
+            {
+                Console.WriteLine("Es mayor de edad");
+            }else
+            {
+                Console.WriteLine("Es menor de edad");
+            }
+            Console.ReadKey();
+        }
+    }
+}
