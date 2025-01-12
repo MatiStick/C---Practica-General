@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Número_par_o_impar
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("Escriba un numero, se determinara si es impar o par.");
+            string numerocomotexto = Console.ReadLine();
+            int numero = Convert.ToInt32(numerocomotexto);
+            if (numero %2 == 0) // Se calcula el cociente del numero el cual si da 0 es par o por lo contrario da impar.
+            {
+                Console.WriteLine("El numero es par");
+            }else
+            {
+                Console.WriteLine("El numero es impar");
+            }
+            Console.ReadKey();
+        }
+    }
+}
