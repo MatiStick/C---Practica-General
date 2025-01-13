@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Año_bisiesto
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingrese un año y se evaluara si es bisiesto:");
+            string añotexto = Console.ReadLine();
+            int año = Convert.ToInt32(añotexto);
+            if (año % 4 == 0 && año % 100 != 0  || año %4 == 0 && año %100 == 0 && año %400 == 0) // Si el año es divisible entre 100, entonces NO es bisiesto, a menos que también sea divisible entre 400.
+            { 
+                Console.WriteLine($"El año {año} es bisiesto");
+            }
+            else 
+            {
+                Console.WriteLine($"El año {año} no es bisiesto");
+            }
+            Console.ReadKey();
+        }
+    }
+}
