@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Mayor_de_dos_números
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingrese dos numeros, de estos se dira cual es el mayor o si son iguales.");
+            string Numtexto1 = Console.ReadLine();  
+            int Num1 = Convert.ToInt32(Numtexto1);
+            Console.WriteLine("Ingrese el segundo numero");
+            string Numtexto2 = Console.ReadLine();
+            int Num2 = Convert.ToInt32(Numtexto2);
+            
+            if (Num1 == Num2) 
+            
+            {
+                Console.WriteLine("Ambos numeros son iguales");
+            }else if (Num1 > Num2)
+            
+            {
+                Console.WriteLine($"El primer numero, {Num1}, es mayor");    
+            }
+            else
+            {
+                Console.WriteLine($"El segundo numero, {Num2}, es mayor");
+            }
+            Console.ReadKey();
+        }
+    }
+}
