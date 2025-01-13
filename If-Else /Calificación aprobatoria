@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calificación_aprobatoria
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingrese una nota, estara aprobado con 6.");
+            string notatexto = Console.ReadLine();
+            int nota = Convert.ToInt32(notatexto);
+            if (nota <= 0)
+            {
+                Console.WriteLine("Resultado imposible");
+            }
+            else if (nota <= 5)
+            {
+                Console.WriteLine("Desaprobado");
+            }
+            else if (nota >= 6 && nota <=10) // Se le incluye el and (&&) ya que si no nos daria error al ingresar un nota como 11 y apareceria  como aprobado
+            {
+                Console.WriteLine("Esta aprobado!");
+            }
+            else if (nota > 10) 
+            {
+                Console.WriteLine("Resultado imposible");
+            }
+            Console.ReadKey();
+        }
+    }
+}
