@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingrese una edad, se considerara un categoria segun la edad");
+
+            string Edadtexto = Console.ReadLine();
+            int Edad = Convert.ToInt32(Edadtexto);
+            if (Edad > 0 && Edad <=12) 
+            {
+                Console.WriteLine("Es un niño/a");
+            }else if (Edad > 12 &&  Edad <=17) 
+            {
+                Console.WriteLine("Es un adolescente");
+            } else if (Edad > 17 && Edad <= 64)
+            {
+                Console.WriteLine("Es un Adulto/a");
+            } else if(Edad > 64)
+            {
+                Console.WriteLine("Es un adulto/a mayor");
+            } else 
+            {
+                Console.WriteLine("Edad imposible");
+            }
+            Console.ReadKey();
+        }
+    }
+}
