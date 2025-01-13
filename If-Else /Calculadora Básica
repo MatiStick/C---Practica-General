@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calculadora_básica
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingrese dos numeros, a partir de estos, seleccionara una operacion basica (+,-,*,/)");
+            Console.WriteLine("Ingrese el primer numero:");
+            string NumeroTexto = Console.ReadLine();
+            float Numero1 = Convert.ToSingle(NumeroTexto);
+            Console.WriteLine("Ingrese el segundo numero:");
+            string NumeroTexto2 = Console.ReadLine();
+            float Numero2 = Convert.ToInt32(NumeroTexto2);
+            Console.WriteLine("Eliga lla operacion a realizar: 1) + , 2) - , 3) *, 4) /");
+            string operaciontxt = Console.ReadLine();
+            int operacion = Convert.ToInt32(operaciontxt);
+            float Resultado;
+
+            if (operacion == 1)
+            {
+                Resultado = Numero1 + Numero2;
+                Console.WriteLine($"El resultado es {Resultado}");
+            }
+            else if (operacion == 2)
+            {
+                Resultado = Numero1 - Numero2;
+                Console.WriteLine($"El resultado es {Resultado}");
+            } 
+            else if (operacion == 3) 
+            { 
+                Resultado = Numero1 * Numero2;
+                Console.WriteLine($"El resultado es {Resultado}");
+            }
+            else if (operacion == 4) 
+            {
+                Resultado = Numero1 / Numero2;
+                Console.WriteLine($"El resultado es {Resultado}");
+            }
+            else
+            {
+                Console.WriteLine("Opcion no disponible");
+            }
+            Console.ReadKey();
+        }
+            
+        
+    }
+}
