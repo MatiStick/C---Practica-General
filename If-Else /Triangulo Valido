@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Triángulo_válido
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingrese tres numeros para poder verificar si las medidas pertenecen a un triangulo");
+            Console.WriteLine("Ingrese el primer numero:");
+            string Num1txt = Console.ReadLine();
+            int Num1 = int.Parse(Num1txt);
+            Console.WriteLine("Ingrese el segundo numero:");
+            string Num2txt = Console.ReadLine();
+            int Num2 = int.Parse(Num2txt);
+            Console.WriteLine("Ingrese el tercer numero:");
+            string Num3txt = Console.ReadLine();
+            int Num3 = int.Parse(Num3txt);
+            if (Num1 + Num2 > Num3 && Num2 + Num3 > Num1 && Num1 + Num3 > Num2) //La suma de dos lados es siempre mayor que el tercero.
+            {
+                Console.WriteLine("Es un triangulo valido");
+            }
+            else
+            {
+                Console.WriteLine("No es un triango valido");
+            }
+            Console.ReadKey();
+        }
+    }
+}
