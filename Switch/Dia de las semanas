@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Dia_de_la_semana
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // Crea un programa que solicite un número del 1 al 7 e imprima el día correspondiente (1: Lunes, 2: Martes, etc.).
+            // Si el número no está entre 1 y 7, muestra un mensaje de error.
+            Console.WriteLine("Ingrese un numero de 1 al 7, se le dara un dia");
+            string diatxt = Console.ReadLine();
+            int dia = int.Parse(diatxt);
+
+            switch (dia)
+            {
+                case 1:
+                    Console.WriteLine("El dia es lunes");
+                    break;
+                case 2:
+                    Console.WriteLine("El dia es martes");
+                    break;
+                case 3:
+                    Console.WriteLine("El dia es miercoles");
+                    break;
+                case 4:
+                    Console.WriteLine("El dia es jueves");
+                    break;
+                case 5:
+                    Console.WriteLine("El dia es viernes");
+                    break;
+                case 6:
+                    Console.WriteLine("El dia es sabado");
+                    break;
+                case 7:
+                    Console.WriteLine("El dia es domingo");
+                    break;
+                default: 
+                    Console.WriteLine("Error, numero incorrecto");
+                    break;
+
+            }
+            Console.ReadKey();
+        }
+    }
+}
