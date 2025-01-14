@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Menú_de_operaciones_matemáticas
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+             * Realiza un calculador basica con las opciones +,-,*,/.
+             * Según la opción elegida, solicita dos números al usuario y realiza la operación correspondiente. 
+             * Si elige un número fuera del menú, muestra un mensaje de error.
+             */
+            Console.WriteLine("Ingrese una opcion para realizar una operacion basica: \n 1- Suma \n 2- Resta \n 3- Multiplicacion \n 4-Division");
+            string operaciontxt = Console.ReadLine();
+            int operacion = int.Parse(operaciontxt);
+            Console.Write("Ingrese el primer numero para la operacion:");
+            string num1txt = Console.ReadLine();
+            float num1 = float.Parse(num1txt);
+            Console.Write("Ingrese el segundo numero:");
+            string num2txt = Console.ReadLine();
+            float num2 = float.Parse(num2txt);
+            float resultado = 0;
+            switch (operacion) {
+                
+                case 1:
+                    resultado = num1 + num2;
+                    Console.WriteLine($"El resultado de la suma es {resultado}");
+                    break;
+                case 2:
+                    resultado = num1 - num2;
+                    Console.WriteLine($"El resultado de la resta es {resultado}");
+                    break;
+                case 3:
+                    resultado = num1 * num2;
+                    Console.WriteLine($"El resultado de la multiplicacion es {resultado}");
+                    break;
+                case 4:
+                    resultado = num1 / num2;
+                    Console.WriteLine($"El resultado de la division es {resultado:0.00}");
+                    break;
+                default: 
+                    Console.WriteLine("Error, opcion no existente");
+                    break;
+            }
+            Console.ReadKey();
+        }
+    }
+}
