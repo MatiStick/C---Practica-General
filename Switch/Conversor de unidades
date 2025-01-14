@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Conversor_de_unidades
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+                Crea un programa que convierta kilómetros a otras unidades de distancia según la opción elegida:
+                1: Millas
+                2: Metros
+                3: Centímetros
+             */
+            Console.Write("Ingrese la cantidad de Kilometros a convertir :");
+            string Kmtxt = Console.ReadLine();
+            float Km = float.Parse(Kmtxt);
+            Console.WriteLine("Ingrese unaa de las opciones: \n 1) Millas \n 2) Metros \n 3)Centimetros ");
+            string opciontxt = Console.ReadLine();
+            int opcion = int.Parse(opciontxt);
+            
+            float millas = 1.60934f;
+            int metros = 1000;
+            int centimetros = 100000;
+            float resultado;
+
+            switch(opcion)
+            {
+                case 1: 
+                    resultado = Km * millas;
+                    Console.WriteLine($"La cantidad de KM a Millas es de {resultado:0.000}");
+                    break;
+                case 2:
+                    resultado = Km * metros;
+                    Console.WriteLine($"La cantidad de KM a Metros es de {resultado}");
+                    break;
+                case 3:
+                    resultado = Km * centimetros;
+                    Console.WriteLine($"La cantidad de KM a centimetros es de { resultado}");
+                    break;
+                default:
+                    Console.WriteLine("Opcion inexistente");
+                    break;
+            }
+            Console.ReadKey();
+  
+        }
+    }
+}
