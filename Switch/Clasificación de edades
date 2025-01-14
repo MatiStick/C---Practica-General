@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Clasificación_por_edades
+{
+    internal class Program
+    {
+        /*Ingresa una edad y clasifícala en:
+        Menor de 12: Niño/a
+        13-17: Adolescente
+        18-64: Adulto/a
+        65 o más: Persona mayor*/
+         
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingrese una edad, sera clasificada");
+            string edadtxt = Console.ReadLine();
+            int edad = int.Parse(edadtxt);
+            switch (edad)
+            {
+                case int n when (n <=12):
+                    Console.WriteLine("Niño/a");
+                    break;
+                case int n when (n >=13 && n <= 17):
+                    Console.WriteLine("Adolescente");
+                    break;
+                case int n when (n >=18 && n <=64):
+                    Console.WriteLine("Adulto");
+                    break;
+                case int n when (n > 64):
+                    Console.WriteLine("Adulto Mayor");
+                    break;
+                
+            }
+            Console.ReadKey();
+        }
+    }
+}
