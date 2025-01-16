@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Juego_de_adivinanza_simple
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+             El programa genera un número del 1 al 5. El usuario debe ingresar un número entre 1 y 5.
+             Usa un switch para determinar si el número ingresado coincide con el generado o si es menor o mayor.
+             */
+            Random random = new Random();
+            int numeroaleatorio = random.Next(1,6);
+            Console.Write("Ingrese un numero del 1 al 5, si adivinas, ganas!: ");
+            string numerotexto = Console.ReadLine();
+            int numero = int.Parse(numerotexto);
+
+            switch(numero)
+            {
+                case int n when (n == numeroaleatorio):
+                    Console.WriteLine("Ganaste!");
+                    break;
+                case int n when (n != numeroaleatorio && n >= 1 && n <= 5):
+                    Console.WriteLine("Perdiste :(");
+                    break;
+                default: 
+                    Console.WriteLine("Numero erroneo");
+                    break;
+            }
+            Console.ReadKey();
+        }
+    }
+}
