@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Clasificación_de_animales
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // Dado que sea reptil, mamifero o ave muestre su categoria.
+            Console.WriteLine("Ingrese mamifero, reptil o ave");
+            string clasificacion = Console.ReadLine();
+            clasificacion = clasificacion.ToLower();// Normalizar la entrada a minúsculas y eliminar espacios
+            switch(clasificacion)
+            {
+                case "mamifero":
+                    Console.WriteLine("Elegiste mamifero");
+                    break;
+                case "reptil":
+                    Console.WriteLine("Elegiste reptil");
+                    break;
+                case "ave":
+                    Console.WriteLine("Elegiste ave");
+                    break;
+                default: 
+                    Console.WriteLine("Ingreso no contemplado");
+                    break;
+            }
+            Console.ReadKey();
+        }
+    }
+}
