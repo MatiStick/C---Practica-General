@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calculadora_de_IVA
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+                Solicita al usuario el precio de un producto y pide elegir el IVA aplicable:
+                1: 10%
+                2: 21%
+                3: 27%
+                Calcula el precio final con el IVA incluido.
+             */
+
+            Console.Write("Ingrese el monto a abonar: ");
+            string montotesto = Console.ReadLine();
+            decimal monto = Convert.ToDecimal(montotesto);
+            Console.WriteLine("Ingrese el IVA a aplicar: \n 1) 10% \n 2) 21% \n 3) 27%");
+            string opciontexto = Console.ReadLine();
+            int opcion = Convert.ToInt32(opciontexto);
+
+            decimal resultado;
+            decimal IVA1= 0.10M;
+            decimal IVA2 = 0.21M;
+            decimal IVA3 = 0.27M;
+
+            switch (opcion)
+            {
+                case 1:
+                    resultado = (monto*IVA1)+monto;
+                    Console.WriteLine($"El valor final es de {resultado:0.00}.");
+                    break;
+                case 2:
+                    resultado = (monto * IVA2) + monto;
+                    Console.WriteLine($"El valor final es de {resultado:0.00}.");
+                    break;
+                case 3:
+                    resultado = (monto * IVA3) + monto;
+                    Console.WriteLine($"El valor final es de {resultado:0.00}.");
+                    break;
+                default:
+                    Console.WriteLine("Opcion no disponible.");
+                    break;
+            }
+            Console.ReadKey();
+
+        }
+    }
+}
