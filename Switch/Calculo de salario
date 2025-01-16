@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Cálculo_de_salarios
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+                Según el cargo ingresado (Gerente, Supervisor, Operario), calcula el salario mensual con base en estos valores:
+                Gerente: $150,000
+                Supervisor: $100,000
+                Operario: $50,000
+                Si el cargo no existe, muestra "Cargo inválido".
+             */
+            Console.WriteLine("Ingrese el cargo del empleado, luego su saldo sera calculado: \n 1) Gerente \n 2) Supervisor \n 3) operario");
+            string categoria = Console.ReadLine();
+            categoria = categoria.ToLower();
+            Console.WriteLine("Ingrese los dias trabajados");
+            string diastxt = Console.ReadLine();
+            int dias = int.Parse(diastxt);
+            int resultado;
+            int gerente = 150000;
+            int supervisor= 100000;
+            int operario = 50000;
+            switch (categoria)
+            {
+                case "gerente":
+                    resultado = gerente*dias;
+                    Console.WriteLine($"El salario total del gerente, es de {resultado}");
+                    break;
+                case "supervisor":
+                    resultado = supervisor * dias;
+                    Console.WriteLine($"El salario total del supervisor, es de {resultado}");
+                    break;
+                case "operario":
+                    resultado = operario * dias;
+                    Console.WriteLine($"El salario total del operario, es de {resultado}");
+                    break;
+                default: 
+                    Console.WriteLine("Cargo no disponible");
+                    break;
+            }
+            Console.ReadKey();
+        }
+    }
+}
