@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Cálculo_de_potencias
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Ingrese un numero que sera la base: ");
+            string basetxt = Console.ReadLine();
+            int basenum = Convert.ToInt32(basetxt);
+            Console.Write("Ingrese un numero que sera el exponente: ");
+            string exponentetxt = Console.ReadLine();
+            int exponente = Convert.ToInt32(exponentetxt);
+            int resultado = 1;
+            for (int i = 1; i <= exponente; i++)
+            {
+                resultado= resultado*basenum;
+            }
+            Console.Write($"El resultado es {resultado}");
+            Console.ReadKey();
+        }
+    }
+}
