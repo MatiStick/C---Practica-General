@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Factorial_de_un_número
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Ingrese un numero y este sera factorizado: ");
+            string numerotxt = Console.ReadLine();
+            int numero = int.Parse(numerotxt);
+            int producto=1;
+
+            for (int i = 1; i <= numero; i++)
+            {
+                producto*=i;
+            }
+            Console.WriteLine($"El resultado de la factorizacion es de {producto}");
+            Console.ReadKey();
+        }
+    }
+}
