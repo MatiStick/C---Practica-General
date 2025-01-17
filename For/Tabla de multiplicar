@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tabla_de_multiplicar
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Ingrese un numero y se mostrara la multiplicacion del 1 al 10: ");
+            string numerotxt = Console.ReadLine();
+            int numero = int.Parse(numerotxt);
+
+            for (int i = 1; i <= 10; i++)
+            {
+                int multiplo = i * numero;
+                Console.WriteLine($"{numero} x {i} = {multiplo}");
+            }
+            Console.ReadKey();
+        }
+    }
+}
