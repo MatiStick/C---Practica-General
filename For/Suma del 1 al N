@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Suma_de_números_del_1_al_N
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Ingrese un numero y se mostraran en pantalla hasta el numero ingresado: ");
+            string numerotexto = Console.ReadLine();
+            int numero = int.Parse(numerotexto);
+            int suma = 0;
+
+            for (int i = 0; i <= numero; i++)
+            {
+                suma += i;
+                
+            }
+            Console.WriteLine($"La suma secuencial del numero ingresado es {suma}");
+            Console.ReadKey();
+        }
+    }
+}
