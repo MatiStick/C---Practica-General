@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Contar_Vocales
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Solicita una palabra al usuario y cuenta cuántas vocales contiene usando un for.
+            Console.Write("Ingrese una palabara u oracion, y se contaran sus vocales: ");
+            string palbara = Console.ReadLine();
+            int contador=0;
+            for (int i = 0; i < palbara.Length; i++)
+            {
+                if ("aeiouAEIOU".Contains(palbara[i]))
+                {
+                    contador++;
+                }
+            }
+            Console.WriteLine($"Contiene {contador} vocales");
+            Console.ReadKey();
+        }
+    }
+}
