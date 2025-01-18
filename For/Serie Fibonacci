@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Serie_de_Fibonacci__N_términos_
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        //Genera los primeros N números de la serie de Fibonacci (solicita N al usuario).
+        {
+            Console.Write("Ingrese la cantidad de cifras que se mostraran de la secuencia de fibonacci: ");
+            string Fibtxt = Console.ReadLine();
+            int Fib = int.Parse(Fibtxt);
+            int n0=0; int n1=1; int aux;
+            for (int i = 0; i < Fib; i++)
+            {
+                Console.Write($"{n0}, ");
+                aux = n0;
+                n0 += n1;
+                n1 = aux;
+
+            }
+            Console.ReadKey(); 
+        }
+    }
+}
