@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Números_primos_entre_1_y_100
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Se imprimiran los numeros entre el 1 y el 100 que sean primos");
+
+            for (int i = 1; i <= 100; i++) // Recorrido de todos los numeros
+            {
+                bool esPrimo = true; 
+
+                for (int j = 2; j < i; j++) // Divisores entre 2 y i-1
+                {
+                    if (i % j == 0)
+                    {
+                        esPrimo = false; // si hay un divisor en su cociente de 0, cambia a falso. 
+                        break;
+                    }
+                }
+
+                if (esPrimo && i > 1) // Si verdadero y i es mayor a 1, entonces imprime.
+                {
+                    Console.WriteLine($"{i} es primo.");
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
