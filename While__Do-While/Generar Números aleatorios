@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Generar_números_aleatorios
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Se imprimiran numeros aleatorios y parará cunado indique 7");
+
+            Random random = new Random();
+            int numero = random.Next(1, 10);
+            int contador=0;
+            contador++;
+            Console.WriteLine($"Ha salido el numero {numero}");
+
+            while (numero != 7)
+            {
+                contador++;
+                Console.WriteLine($"Ha salido el numero {numero}");
+                numero = random.Next(1,10);
+                if (numero == 7) 
+                {
+                    Console.WriteLine($"Ha salido el numero {numero}");
+                    contador++;
+                }
+            }
+         
+            Console.WriteLine($"Se han requerido {contador} intentos");
+            Console.ReadKey();
+        }
+    }
+}
