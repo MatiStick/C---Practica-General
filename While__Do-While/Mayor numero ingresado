@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Mayor_número_ingresado
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Ingrese numeros, se mostrara el mayor ingresado (Salir ingresando 0): ");
+            string numerotxt = Console.ReadLine();
+            int numero = int.Parse(numerotxt);
+            int mayor = 0;
+         
+            while (numero != 0)
+            {
+                if (numero > mayor)
+                {
+                    mayor = numero;
+                }
+                Console.Write("Ingrese otor numero: ");
+                numerotxt = Console.ReadLine();
+                numero = int.Parse(numerotxt);
+            }
+            Console.WriteLine($"El mayor numero ingresado es {mayor}");
+            Console.ReadKey();
+        }
+    }
+}
