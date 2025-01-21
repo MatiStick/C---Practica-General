@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Generar_una_tabla_de_multiplicar
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            int multiplicacion = 0;
+            bool condicion = true;
+
+            do
+            {   
+                Console.Write("Ingrese un numero el cual mostrara su tabla de multiplicar del 1 al 10: ");
+                string numerotxt = Console.ReadLine();
+                int numero = int.Parse(numerotxt);
+               
+                for (int i = 1; i <= 10; i++)
+                {
+                    multiplicacion = i * numero;
+                    Console.WriteLine($"{i} X {numero} ={multiplicacion}");
+
+                }
+
+                Console.WriteLine("Desea seguir ingresando numeros? Escriba Si o No");
+                string condiciontxt = Console.ReadLine();
+                string minuscula = condiciontxt.ToLower();
+
+                if (minuscula == "no")
+                {
+                    condicion = false;
+                    Console.WriteLine("Se cerrara el programa");
+                }
+                else if (minuscula != "no" && minuscula != "si")
+                {
+                    Console.WriteLine("Caracteres erroneos se cerrara el programa");
+                    condicion = false;
+                }
+            }
+
+            while (condicion == true);
+            Console.ReadKey();
+        }
+              
+        
+    }
+}
