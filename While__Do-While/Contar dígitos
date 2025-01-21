@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Contar_dígitos_de_un_número
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Ingrese un numero y se contemplara la cantidad de cifras que contiene (ingrese 0 para salir): ");
+            string numerotxt = Console.ReadLine();
+            
+
+            while (numerotxt != "0")
+            {
+                int numero = numerotxt.Length;
+                Console.WriteLine($"La cantidad de cifras es de: {numero}");
+                
+                Console.Write("Ingrese otro numero: ");
+                numerotxt = Console.ReadLine();
+                    
+            }
+            Console.WriteLine("Saliendo...");
+            Console.ReadKey();
+        }
+    }
+}
