@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Policy;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Pirámide_de_números
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Crea una pirámide de números hasta 𝑁.
+            //Cada fila contiene números consecutivos desde 1 hasta el número de la fila. Usa un for anidado.
+
+            Console.Write("Ingrese un numero, este se imprimira en piramide del 1 hasta el numero ingresado: ");
+            string numerotxt = Console.ReadLine();
+            int numero = int.Parse(numerotxt);
+
+            for (int i = 1; numero >= i; i++)//Controla las filas de la piramide
+            {
+                
+                for (int j = 1; j <= i; j++)//Controla la cantidad de numeros impresos en cada fila.
+                {
+                    Console.Write($"{j} ");
+                }
+                
+                Console.Write("\n");
+
+            }
+            Console.ReadKey();
+        }
+    }
+}
