@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Suma_de_números_ingresados
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingrese numeros para sumar y ingrese 0 para poder finalizar.");
+            Console.Write("Ingrese el primer numero: ");
+            string numerotxt = Console.ReadLine();
+            int numero = int.Parse(numerotxt);
+            int suma=0;
+            
+            while (numero != 0) 
+            {
+                suma += numero;
+                Console.Write("Ingrese otro numero: ");
+                numerotxt = Console.ReadLine();
+                numero = int.Parse(numerotxt);
+
+            }
+
+            Console.WriteLine($"La suma total es de {suma}");
+            Console.ReadKey();
+        }
+    }
+}
